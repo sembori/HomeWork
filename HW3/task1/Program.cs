@@ -4,13 +4,11 @@ Clear();
 Write("Введите пятизначное число: ");
 int a = Convert.ToInt32(ReadLine());
 
-if (a > 99999)
+if (a > 99999 || a < 10000)
 {
-    WriteLine("Введите меньшее число");
+    WriteLine("Число должно быть пятизначным!");
 }
-else if (a < 10000){
-    WriteLine("Введите большее число");
-}else
+else
 {
     WriteLine((a / 1000 + a % 100) % 11 == 0 ? "ДА" : "НЕТ");
 }
